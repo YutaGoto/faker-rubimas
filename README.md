@@ -1,5 +1,7 @@
 # Faker::Rubimas
 
+[![Build Status](https://travis-ci.org/YutaGoto/faker-rubimas.svg?branch=master)](https://travis-ci.org/YutaGoto/faker-rubimas)
+
 Test data generator using 765PRO all stars (include million stars).
 
 This gem is inspired by [sue445/faker-precure](https://github.com/sue445/faker-precure) and [imas/rubimas](https://github.com/imas/rubimas).
