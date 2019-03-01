@@ -1,95 +1,95 @@
 RSpec.describe Faker::Rubimas do
-  it "has a version number" do
+  it 'has a version number' do
     expect(Faker::Rubimas::VERSION).not_to be nil
   end
 
-  describe ".name" do
-    subject{ Faker::Rubimas.name }
+  describe '.name' do
+    subject { Faker::Rubimas.name }
 
-    let(:all_idols){ ::Rubimas.all.map { |idol| idol.name.full } }
+    let(:all_idols) { ::Rubimas.all.map { |idol| idol.name.full } }
 
-    it{ should_not be_blank }
-    it{ should be_an_element_of all_idols }
+    it { should_not be_blank }
+    it { should be_an_element_of all_idols }
   end
 
-  describe ".favorite" do
-    subject{ Faker::Rubimas.favorite }
+  describe '.favorite' do
+    subject { Faker::Rubimas.favorite }
 
-    let(:all_favs){ ::Rubimas.all.map { |idol| idol.favorites }.flatten }
+    let(:all_favs) { ::Rubimas.all.map(&:favorites).flatten }
 
-    it{ should_not be_blank }
-    it{ should be_an_element_of all_favs }
+    it { should_not be_blank }
+    it { should be_an_element_of all_favs }
   end
 
-  describe ".hobby" do
-    subject{ Faker::Rubimas.hobby }
+  describe '.hobby' do
+    subject { Faker::Rubimas.hobby }
 
-    let(:all_hobbies){ ::Rubimas.all.map { |idol| idol.hobbies }.flatten }
+    let(:all_hobbies) { ::Rubimas.all.map(&:hobbies).flatten.compact }
 
-    it{ should_not be_blank }
-    it{ should be_an_element_of all_hobbies }
+    it { should_not be_blank }
+    it { should be_an_element_of all_hobbies }
   end
 
-  describe ".color" do
-    subject{ Faker::Rubimas.color }
+  describe '.color' do
+    subject { Faker::Rubimas.color }
 
-    let(:all_colors){ ::Rubimas.all.map { |idol| idol.color }.flatten }
+    let(:all_colors) { ::Rubimas.all.map(&:color).flatten }
 
-    it{ should_not be_blank }
-    it{ should be_an_element_of all_colors }
+    it { should_not be_blank }
+    it { should be_an_element_of all_colors }
   end
 
-  describe ".cv" do
-    subject{ Faker::Rubimas.cv }
+  describe '.cv' do
+    subject { Faker::Rubimas.cv }
 
-    let(:all_cvs){ ::Rubimas.all.map { |idol| idol.cv }.flatten }
+    let(:all_cvs) { ::Rubimas.all.map(&:cv).flatten }
 
-    it{ should_not be_blank }
-    it{ should be_an_element_of all_cvs }
+    it { should_not be_blank }
+    it { should be_an_element_of all_cvs }
   end
 
-  describe ".talent" do
-    subject{ Faker::Rubimas.talent }
+  describe '.talent' do
+    subject { Faker::Rubimas.talent }
 
-    let(:all_talents){ ::Rubimas.all.map { |idol| idol.talents }.flatten }
+    let(:all_talents) { ::Rubimas.all.map(&:talents).flatten }
 
-    it{ should_not be_blank }
-    it{ should be_an_element_of all_talents }
+    it { should_not be_blank }
+    it { should be_an_element_of all_talents }
   end
 
-  describe ".idol_type" do
-    subject{ Faker::Rubimas.idol_type }
+  describe '.idol_type' do
+    subject { Faker::Rubimas.idol_type }
 
-    let(:all_types){ ::Rubimas.all.map(&:idol_type).uniq }
+    let(:all_types) { ::Rubimas.all.map(&:idol_type).uniq }
 
-    it{ should_not be_blank }
-    it{ should be_an_element_of all_types }
+    it { should_not be_blank }
+    it { should be_an_element_of all_types }
   end
 
-  describe ".color" do
-    subject{ Faker::Rubimas.color }
+  describe '.color' do
+    subject { Faker::Rubimas.color }
 
-    let(:all_colors){ ::Rubimas.all.map(&:color).uniq }
+    let(:all_colors) { ::Rubimas.all.map(&:color).uniq }
 
-    it{ should_not be_blank }
-    it{ should be_an_element_of all_colors }
+    it { should_not be_blank }
+    it { should be_an_element_of all_colors }
   end
 
-  describe ".unit_name" do
-    subject{ Faker::Rubimas.unit_name }
+  describe '.unit_name' do
+    subject { Faker::Rubimas.unit_name }
 
-    let(:all_units){ ::Rubimas::Unit.all.map(&:name) }
+    let(:all_units) { ::Rubimas::Unit.all.map(&:name) }
 
-    it{ should_not be_blank }
-    it{ should be_an_element_of all_units }
+    it { should_not be_blank }
+    it { should be_an_element_of all_units }
   end
 
-  describe ".unit_member_names" do
-    subject{ Faker::Rubimas.unit_member_names }
+  describe '.unit_member_names' do
+    subject { Faker::Rubimas.unit_member_names }
 
-    let(:all_unit_members){ ::Rubimas::Unit.all.map {|unit| unit.members.map{ |member| member.name.full} }}
+    let(:all_unit_members) { ::Rubimas::Unit.all.map { |unit| unit.members.map { |member| member.name.full } } }
 
-    it{ should_not be_blank }
-    it{ should be_an_element_of all_unit_members }
+    it { should_not be_blank }
+    it { should be_an_element_of all_unit_members }
   end
 end
