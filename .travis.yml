@@ -3,5 +3,15 @@ sudo: false
 language: ruby
 cache: bundler
 rvm:
+  - 2.2.2
+  - 2.3
+  - 2.4
+  - 2.5
   - 2.6.1
+  - ruby-head
 before_install: gem install bundler -v 1.17.2
+script:
+  - bundle exec rspec
+notifications:
+  slack:
+    secure: "DaqI7wGW+trLFr96//smCuKD9Irs1S9KRAddX+atNpnUMrHyY+ru2XPEz3G1DAB8eYxtSokvgbAkyH/YNP6oxxpK3uWU7l39jP1IZPKfAAKr0aog4i2m/T0ZFgmLMNYBBGXG8GalMStx37wJWuoPSANSr2IfFgoSiC+n7q1M4MlHVDOTorM2HYDhvgBchJ4Yjjqc+qHiocE7ZytgRz1Jh9UyovRaUnl48lcQ4g5e2KQ6fh1Bmz5JirP9YbhQMK+dWXwVO0aSQY8ugSbYt5+rUi/i8UBaBvK8RjMcPeUJGS+ISL7SVzlt7RWXaSBnqoArJA+vq4rTddhIaBK/MQIxvL09dLCqRqeUXr+rd4acO+NhWpeyeO/OEZkRnNHWbVcesiOfvlSpYqavv9l8l2qJtGCjcv4MGaSIVwRZrNhBt+yM8nfkrtBPo9fhFDbQKdZq4iNWqGTKpP5tY1iFfJUcSAbwjLOZ4x5GJU+eJF46bgoJb8DGjNqznclzyMOe43bmJDRBwQvO/1lQ9vff1n0uP5PEifb9w11rchAME8ohCI4z1XdUGT8R69gwfErMrk1t2SsWMR1/d0w5RQpQBTwvZDS1wqD32G1hcGB4AIDqnJaEmNMPF7tCecNk1kJz60byzWB7+YEONgvU9D8Ip10Q6ofr4z3OT1QbMK1QiCvaCEQ="
