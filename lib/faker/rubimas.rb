@@ -8,7 +8,7 @@ module Faker
 
     ::Rubimas.theaterdays!
 
-    def self.idol_name
+    def self.name
       sample_idol.name.full
     end
 

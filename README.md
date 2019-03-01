@@ -1,8 +1,8 @@
 # Faker::Rubimas
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/faker/rubimas`. To experiment with that code, run `bin/console` for an interactive prompt.
+Test data generator using 765PRO all stars (include million stars).
 
-TODO: Delete this and the text above, and describe your gem
+This gem is inspired by [sue445/faker-precure](https://github.com/sue445/faker-precure) and [imas/rubimas](https://github.com/imas/rubimas).
 
 ## Installation
 
@@ -22,17 +22,40 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'faker/rubimas'
 
-## Development
+Faker::Rubimas.name
+# => "望月杏奈"
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Faker::Rubimas.favorite
+# => "ハト"
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+Faker::Rubimas.hobby
+# => "登山"
+
+Faker::Rubimas.talent
+# => "ポーカーフェイス"
+
+Faker::Rubimas.idol_type
+# => "Princess"
+
+Faker::Rubimas.color
+# => "#ffe43f"
+
+Faker::Rubimas.cv
+# => "長谷川明子"
+
+Faker::Rubimas.unit_name
+# => "クレシェンドブルー"
+
+Faker::Rubimas.unit_member_names
+# => ["天海春香", "周防桃子", "福田のり子", "松田亜利沙", "横山奈緒"]
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/faker-rubimas. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/YutaGoto/faker-rubimas. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -40,4 +63,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Faker::Rubimas project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/faker-rubimas/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Faker::Rubimas project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/YutaGoto/faker-rubimas/blob/master/CODE_OF_CONDUCT.md).

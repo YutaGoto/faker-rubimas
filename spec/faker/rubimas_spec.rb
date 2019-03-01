@@ -3,8 +3,8 @@ RSpec.describe Faker::Rubimas do
     expect(Faker::Rubimas::VERSION).not_to be nil
   end
 
-  describe ".idol_name" do
-    subject{ Faker::Rubimas.idol_name }
+  describe ".name" do
+    subject{ Faker::Rubimas.name }
 
     let(:all_idols){ ::Rubimas.all.map { |idol| idol.name.full } }
 
